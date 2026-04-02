@@ -1,0 +1,166 @@
+👤 **USER**: Sir/Madam
+📚 **PROJECT**: Secure File Storage Server
+🎓 **COURSE**: CN (Computer Networking)
+✅ **STATUS**: COMPLETE & RUNNING
+
+═══════════════════════════════════════════════════════════════
+
+🚀 QUICK START GUIDE
+═══════════════════════════════════════════════════════════════
+
+## STEP 1: Open Two Terminal Windows
+
+### Terminal 1 - SERVER
+```powershell
+cd "c:\ramu\project\CN- project"
+server\server.exe
+```
+
+Expected output:
+```
+Server listening on port 8080
+```
+
+### Terminal 2 - CLIENT  
+```powershell
+cd "c:\ramu\project\CN- project"
+client\client.exe
+```
+
+Expected output:
+```
+Secure File Storage Client
+Commands: register <user> <pass>, login <user> <pass>, upload <file>, download <file>, list, delete <file>, logout, quit
+>
+```
+
+═══════════════════════════════════════════════════════════════
+
+## STEP 2: Try These Commands
+
+```
+> register alice mypassword
+Response: OK
+
+> login alice mypassword
+Logged in
+
+> upload README.md
+Response: OK
+
+> list
+Files:
+README.md
+
+> download README.md
+Downloaded README.md
+
+> delete README.md
+Response: OK
+
+> logout
+Logged out
+
+> quit
+```
+
+═══════════════════════════════════════════════════════════════
+
+## 📁 Project Features
+
+✅ User Registration & Authentication
+✅ File Upload/Download
+✅ File Listing
+✅ File Deletion  
+✅ User-Specific Storage
+✅ Multi-Client Support
+✅ Secure Socket Communication
+✅ Session Management
+
+═══════════════════════════════════════════════════════════════
+
+## 📊 Project Structure
+
+📦 CN- project/
+ ├── 📂 server/
+ │   ├── 🔧 server.exe         ← Run this (Server)
+ │   ├── 📄 server.c
+ │   ├── 📄 auth.c
+ │   ├── 📄 crypto.c
+ │   ├── 📄 file_ops.c
+ │   └── 📄 *.h
+ ├── 📂 client/
+ │   ├── 🔧 client.exe         ← Run this (Client)
+ │   └── 📄 client.c
+ ├── 📂 storage/
+ │   └── 📂 (user directories created at runtime)
+ ├── 📄 users.dat              ← User database
+ ├── 📄 PROJECT_SUMMARY.md     ← Detailed documentation
+ └── 📄 QUICKSTART.txt         ← This file
+
+═══════════════════════════════════════════════════════════════
+
+## 🔧 Technical Details
+
+Language: C
+Compiler: GCC (MinGW)
+Network: TCP/IP (Port 8080)
+Platform: Windows
+Sockets: Winsock2
+
+═══════════════════════════════════════════════════════════════
+
+## 📋 Command Reference
+
+| Command | Format | Example |
+|---------|--------|---------|
+| Register | register <user> <pass> | register alice pass123 |
+| Login | login <user> <pass> | login alice pass123 |
+| Upload | upload <filename> | upload document.pdf |
+| Download | download <filename> | download document.pdf |
+| List | list | list |
+| Delete | delete <filename> | delete document.pdf |
+| Logout | logout | logout |
+| Quit | quit | quit |
+
+═══════════════════════════════════════════════════════════════
+
+## ❌ Troubleshooting
+
+❓ "Connection refused"
+   → Make sure server.exe is running in Terminal 1
+
+❓ "Port already in use"  
+   → Close other server processes using port 8080
+
+❓ "File not found during upload"
+   → File must exist in current directory (CN- project/)
+
+═══════════════════════════════════════════════════════════════
+
+## ⭐ What Makes It Secure?
+
+✓ User authentication (username/password)
+✓ Per-user file storage isolation
+✓ File integrity checks
+✓ Secure socket communication
+✓ Session management (login/logout)
+
+═══════════════════════════════════════════════════════════════
+
+## 🎯 Next Steps for Enhancement
+
+1. Add OpenSSL for file encryption (AES-256)
+2. Implement TLS/SSL for secure communication
+3. Hash passwords with PBKDF2
+4. Add multi-threading for concurrent clients
+5. Implement file permissions system
+6. Add audit logging
+
+═══════════════════════════════════════════════════════════════
+
+🎓 Good luck with your Computer Networking project!
+
+For detailed information, see: PROJECT_SUMMARY.md
+
+═══════════════════════════════════════════════════════════════
